@@ -1,0 +1,238 @@
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('/assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf');
+}
+
+*::before,
+*::after, 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+input,
+button {
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: block;
+    color: var(--Neutral-500);
+}
+
+input::placeholder {
+    color: var(--Neutral-500);
+}
+
+label {
+    display: block;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+:root {
+    --Neutral-0: hsl(0, 0%, 100%);
+    --Neutral-300: hsl(252, 6%, 83%);
+    --Neutral-500: hsl(245, 15%, 58%);
+    --Neutral-700: hsl(245, 19%, 35%);
+    --Neutral-900: hsl(248, 70%, 10%);
+
+    --Orange-500: hsl(7, 88%, 67%);
+    --Orange-700: hsl(7, 71%, 60%);
+
+    --border-radius: 0.8rem;
+
+    --weight-400: 400;
+    --weight-500: 500;
+    --weight-700: 700;
+    --weight-800: 800;
+}
+
+body {
+    position: relative;
+    font-family: 'Inconsolata';
+    line-height: 1.2;
+    font-size: 1.7rem;
+    color: var(--Neutral-0);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url('/assets/images/pattern-lines.svg'), url('/assets/images/background-mobile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#app {
+    margin: 2.2rem;
+    max-width: 62.5rem;
+}
+
+.page-banner {
+    margin-bottom: 2.8rem;
+}
+
+.page-banner,
+.page-banner p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-banner p {
+    gap: 1.2rem;
+    font-size: 2.0rem;
+    font-weight: var(--weight-700);
+}
+
+.page-banner img {
+    width: 2.5rem;
+}
+
+form {
+    max-width: 35.5rem;
+    margin: auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.heading p {
+    font-weight: var(--weight-400);
+    color: var(--Neutral-300);
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin-bottom: 1.8rem;
+    font-weight: var(--weight-800);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.0rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0rem;
+}
+
+input {
+    border: 0.1rem solid var(--Neutral-700);
+    min-width: 0;
+    padding: 1.3rem;
+    border-radius: var(--border-radius);
+    font-family: 'Inconsolata';
+}
+
+button[type='submit'] {
+    background-color: var(--Orange-700);
+    padding: 1.2rem;
+    color: var(--Neutral-900);
+    font-size: 1.7rem;  
+    font-weight: var(--weight-800);
+    font-family: 'Inconsolata';
+    border-radius: var(--border-radius);
+}
+
+.line-bottom,
+.line-top {
+    position: absolute;
+    z-index: -10;
+}
+
+.line-column {
+    position: absolute;
+    bottom: 30%;
+    left: 60%;
+}
+
+.line-top {
+    top: 5rem;
+    right: 0;
+    width: 12.5rem;
+}
+
+.line-bottom {
+    bottom: 0;
+    left: 0;
+}
+
+.circle-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15.5rem;
+}
+
+.circle-bottom {
+    display: none;
+}
+
+
+
+
+
+@media screen and (min-width: 767px) {
+    body {
+        font-size: 2.0rem;
+        background-image: url('/assets/images/pattern-lines.svg'), url('/assets/images/background-tablet.png');
+    }
+
+    .line-top {
+        width: auto;
+    }
+
+    .line-bottom {
+        width: auto;
+    }
+
+    h1 {
+        font-size: 4.0rem;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-image: url('/assets/images/pattern-lines.svg'), url('/assets/images/background-desktop.png');
+    }
+
+    .circle-top {
+        top: -8.0rem;
+        left: 10%;
+    }
+
+    .circle-bottom {
+        display: block;
+        position: absolute;
+        bottom: 25%;
+        right: 20%;
+    }
+}
