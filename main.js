@@ -1,6 +1,7 @@
 import { welcomeComponent } from "./modules/welcome.js";
+import { ticketComponent } from "./modules/ticket.js";
 
 
-const item = welcomeComponent('Bob Smith', 'bobsmith@gmail.com');
+const item = ticketComponent('Jonatan Kristof', '@jonatankristof0101');
 
-console.log(item);
+const app = document.querySelector('#app');

@@ -192,7 +192,54 @@ button[type='submit'] {
     display: none;
 }
 
+.user-avatar img {
+    width: 3.55rem;
+    height: 3.55rem;
+    border-radius: 0.4rem;
+    align-self: center;
+}
 
+.user-ticket {
+    position: relative;
+    padding: 2.0rem;
+    margin: 3.5rem auto;
+    max-width: 30.5rem;
+}
+
+.user-ticket::after {
+    content: '';
+    background-image: url('/assets/images/pattern-ticket.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ticket-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.ticket-details {
+    font-size: 1.3rem;
+    color: var(--Neutral-300);
+    margin-left: 4.5rem;
+}
+
+.user-wrapper {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.github-id {
+    font-size: 1.2rem;
+    color: var(--Neutral-300);
+}
 
 
 

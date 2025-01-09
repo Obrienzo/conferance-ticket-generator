@@ -10,19 +10,18 @@ export function ticketComponent(name, gitHubAccount) {
                 <img src='/assets/images/logo-full.svg' alt='ticket logo' />
             </div>
             <div class='ticket-details'>
-                <p class='event-name'>Coding Conf</p>
                 <p class='event-location'>Jan, 31, 2025 / Austin, TX</p>
             </div>
         </div>
-        <div class='ticket-user'>
+        <div class='user-wrapper'>
             <div class='user-avatar'>
-                <img src='/assets/images/image-avatar.jpg alt='Jonathan avatar' />
+                <img src='/assets/images/image-avatar.jpg' alt='Jonathan avatar' />
             </div>
             <div class='user-details'>
                 <p class='user-name'>${name}</p>
                 <p class='user-github>
                     <img src='/assets/images/icon-github.svg' alt='gitHub logo' />
-                    <span>${gitHubAccount}</span>
+                    <span class='github-id'>${gitHubAccount}</span>
                 </p>
             </div>
         </div>
