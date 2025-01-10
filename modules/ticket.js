@@ -19,11 +19,12 @@ export function ticketComponent(name, gitHubAccount) {
             </div>
             <div class='user-details'>
                 <p class='user-name'>${name}</p>
-                <p class='user-github>
+                <p class='user-github'>
                     <img src='/assets/images/icon-github.svg' alt='gitHub logo' />
                     <span class='github-id'>${gitHubAccount}</span>
                 </p>
             </div>
+            <p class='ticket-number'>#01609</p>
         </div>
     `;
 

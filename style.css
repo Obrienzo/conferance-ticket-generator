@@ -140,6 +140,19 @@ label {
     gap: 1.0rem;
 }
 
+label[for="upload"] input {
+    padding: 2.0rem;
+    border: 0.1rem dashed var(--Neutral-500);
+}
+
+.info {
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1.0rem;
+    color: var(--Neutral-500);
+    font-weight: 500;
+}
+
 input {
     border: 0.1rem solid var(--Neutral-700);
     min-width: 0;
@@ -239,6 +252,27 @@ button[type='submit'] {
 .github-id {
     font-size: 1.2rem;
     color: var(--Neutral-300);
+}
+
+.user-github {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.user-github img {
+    width: 1.4rem;
+}
+
+.ticket-number {
+    color: var(--Neutral-500);
+    font-size: 1.5rem;
+    letter-spacing: 0.4rem;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 7.6rem;
+    top: 0;
+    bottom: 0;
 }
 
 
