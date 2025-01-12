@@ -140,9 +140,10 @@ label {
     gap: 1.0rem;
 }
 
-label[for="upload"] input {
+.file-upload {
     padding: 2.0rem;
     border: 0.1rem dashed var(--Neutral-500);
+    border-radius: var(--border-radius);
 }
 
 .info {
@@ -275,6 +276,9 @@ button[type='submit'] {
     bottom: 0;
 }
 
+input[type='file'] {
+    display: none;
+}
 
 
 @media screen and (min-width: 767px) {
