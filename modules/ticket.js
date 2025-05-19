@@ -1,3 +1,4 @@
+import { ticketIdGenerator } from "./ticketId.js";
 export function ticketComponent(name, gitHubAccount) {
     const ticket = document.createElement('article');
     ticket.classList.add('user-ticket');
@@ -24,7 +25,7 @@ export function ticketComponent(name, gitHubAccount) {
                     <span class='github-id'>${gitHubAccount}</span>
                 </p>
             </div>
-            <p class='ticket-number'>#01609</p>
+            <p class='ticket-number'>#${ticketIdGenerator()}</p>
         </div>
     `;
 
