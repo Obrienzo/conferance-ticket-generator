@@ -1,79 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Conference ticket generator</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="module" src="main.js" defer></script>
-</head>
-<body>
-
-
-  <div id="app">
-    <div class="circle-top">
-      <img src="assets/images/pattern-circle.svg" alt="">
-    </div>
-    <div class="circle-bottom">
-      <img src="assets/images/pattern-circle.svg" alt="">
-    </div>
-    <div class="line-bottom">
-      <img src="assets/images/pattern-squiggly-line-bottom.svg" alt="">
-    </div>
-    <div class="line-top">
-      <img src="assets/images/pattern-squiggly-line-top.svg" alt="">
-    </div>
-    <main>
-      <section class="page-banner">
-        <p>
-          <img src="assets/images/logo-mark.svg" alt="page logo">
-          Coding Conf
-        </p>
-      </section>
-      <section class="page-content">
-        <div class="heading">
-          <h1>Your Journey to coding Conf 2025 Starts Here!</h1>
-          <p>
-            Secure your spot at next year's biggest coding conference.
-          </p>
-        </div>
-        <form>
-          <div>
-            <label for="avatar">
-              <span>Upload Avatar</span>
-              <div class="file-wrapper">
-                <div class="file-upload">
-                  <img src="assets/images/icon-upload.svg" alt="">
-                </div>
-                <span>Drag and drop or click to upload</span>
-              </div>
-            </label>
-            <input type="file" name="avatar" id="avatar" accept=".png, .jpeg, .jpg">
-            <p class="notify">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg>
-              <span>Upload your photo (JPG or PNG, max size: 500kB)</span>
-            </p>
-          </div>
-          <label for="user-name">
-            Full name
-            <input type="text" name="user-name" id="user-name">
-          </label>
-          <label for="email">
-            Email Address
-            <input type="email" name="email" id="email" placeholder="example@email.com">
-          </label>
-          <label for="github-username">
-            GitHub Username
-            <input type="text" name="github-username" id="github-username" placeholder="@yourusername">
-          </label>
-          <button type="submit">Generate My Ticket</button>
-        </form>
-      </section>
-    </main>
-  </div>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
