@@ -11,10 +11,10 @@ function TicketCard(props) {
                 <div className="flex items-center gap-3">
                     <img className="w-11 rounded-lg" src="/src/assets/images/image-avatar.jpg" alt="avatar icon" />
                     <div>
-                        <h2 className="text-xl text-neutral-50">Jonatan Kristof</h2>
+                        <h2 className="text-xl text-neutral-50">{props.name}</h2>
                         <div className="flex gap-0.5 items-center">
                             <img src="/src/assets/images/icon-github.svg" alt="gitHub icon" />
-                            <span className="text-sm text-neutral-300">@jonatankristof0101</span>
+                            <span className="text-sm text-neutral-300">@{props.username}</span>
                         </div>
                     </div>
                 </div>

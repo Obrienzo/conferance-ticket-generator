@@ -1,20 +1,44 @@
+import { useState } from "react";
 
 function Form() {
-    const formElement = document.querySelector('form');
+    const [formData, setFormData] = useState(null);
+    const [showForm, setShowForm] = useState(true);
+
     
     function onSubmitEvent(event) {
         event.preventDefault();
-        const fullName = formElement.elements[0].value;
-        const email = formElement.elements[1].value;
-        const githubUsername = formElement.elements[2].value;
-        alert(`Ticket generated for ${fullName} with email ${email} and GitHub username ${githubUsername}`);
-        formElement.reset();
-        formElement.remove();
+        const form = event.target;
+        const avatar = form.elements.upload.value;
+        const name = form.elements.name.value;
+        const email = form.elements.email.value;
+        const username = form.elements.username.value;
+        
+        // Store the form data
+        setFormData({
+            avatar: avatar,
+            name: name,
+            email: email,
+            username: username
+        });
+
+        // Hide the form
+        setShowForm(false);
+
+        // Reset the form
+        form.reset();
 
     }
 
     return (
         <form onSubmit={onSubmitEvent} className="flex flex-col gap-3.5 mt-5">
+            <p className="file-field">
+                <label htmlFor="upload">Upload Avatar</label>
+                <input className="block w-full mt-2 border-dashed border-neutral-500 rounded-lg p-2.5" type="file" name="upload" id="upload" accept=".png, .jpg, .jpeg" />
+                <div className="flex items-center gap-2 text-neutral-500 text-sm mt-2.5">
+                    <img src="/src/assets/images/icon-info.svg" alt="Info icon" />
+                    <span>Upload your photo (JPG or PNG, max size: 500KB).</span>
+                </div>
+            </p>
             <p className="name-field">
                 <label htmlFor="name">Full Name</label>
                 <input className="block w-full mt-2 border border-neutral-500 rounded-lg p-2.5" type="text" name="name" id="name" required />
