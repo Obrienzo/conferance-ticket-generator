@@ -2,24 +2,25 @@
 
 function TicketCard(props) {
     return (
-        <article className="bg-[url('/src/assets/images/pattern-ticket.svg')] bg-contain bg-center bg-no-repeat py-4 px-8 relative mt-6">
-            <section className="flex flex-col gap-8">
+        <article className="relative mt-6">
+            <img className="w-full h-full" src="/src/assets/images/pattern-ticket.svg" alt="ticket pattern" />
+            <div className="absolute top-0 left-0 p-2.5 md:p-3.5 h-full flex flex-col justify-between">
                 <div>
-                    <img className="mb-1.5" src="/src/assets/images/logo-full.svg" alt="ticket card logo" />
-                    <p className="text-xs text-neutral-300 ml-12">Jan 31, 2025 / Austin, TX</p>
+                    <img className="w-44 md:w-58" src="/src/assets/images/logo-full.svg" alt="logo full" />
+                    <p className="text-xs md:text-sm pl-10 md:pl-14 text-slate-300">Jan 31, 2025 / Austin, TX</p>
                 </div>
-                <div className="flex items-center gap-3">
-                    <img className="w-11 rounded-lg" src="/src/assets/images/image-avatar.jpg" alt="avatar icon" />
+                <div className="flex items-center gap-1.5 md:gap-2.5">
+                    <img className="w-9 md:w-12 aspect-square rounded-md" src={props.avtar} alt={props.avatar} />
                     <div>
-                        <h2 className="text-xl text-neutral-50">{props.name}</h2>
-                        <div className="flex gap-0.5 items-center">
-                            <img src="/src/assets/images/icon-github.svg" alt="gitHub icon" />
-                            <span className="text-sm text-neutral-300">@{props.username}</span>
+                        <h2 className="text-slate-50 text-xl md:text-2xl">{props.name}</h2>
+                        <div className="flex items-center">
+                            <img className="w-4 md:w-6" src="/src/assets/images/icon-github.svg" alt="GitHub icon" />
+                            <span className="text-xs md:text-sm text-slate-300">@{props.username}</span>
                         </div>
                     </div>
                 </div>
-            </section>
-            <code className="absolute right-5 top-18 rotate-90 text-neutral-500">#01609</code>
+            </div>
+            <code className="absolute right-1 top-14 md:top-20 rotate-90 text-neutral-500 md:text-xl">#01609</code>
         </article>
     );
 }
