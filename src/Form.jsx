@@ -1,8 +1,6 @@
-import { useState } from "react";
 
-function Form() {
-    const [formData, setFormData] = useState(null);
-    const [showForm, setShowForm] = useState(true);
+
+function Form({ setShowIntro, setUserData }) {
 
     const fileTypes = [
         'image/png',
@@ -14,29 +12,35 @@ function Form() {
         return fileTypes.includes(file.type);
     }
 
-    function updateImageDisplay() {
-        const curFile = input.files;
-    }
+    // function updateImageDisplay() {
+    //     const curFile = input.files;
+    // }
 
     
     function onSubmitEvent(event) {
         event.preventDefault();
         const form = event.target;
-        const avatar = form.elements.upload.value;
+        const avatar = form.elements.upload.files[0]; // get the file object
         const name = form.elements.name.value;
         const email = form.elements.email.value;
         const username = form.elements.username.value;
-        
-        // Store the form data
-        setFormData({
-            avatar: avatar,
-            name: name,
-            email: email,
-            username: username
-        });
 
-        // Hide the form
-        setShowForm(false);
+        let avatarUrl;
+
+        if (avatar) {
+            avatarUrl = URL.createObjectURL(avatar);
+        }
+
+        // Store the form data in parent 
+        setUserData({
+            avatar: avatarUrl,
+            name,
+            email,
+            username
+        })
+
+        // Hide the intro
+        setShowIntro(false);
 
         // Reset the form
         form.reset();
@@ -45,14 +49,14 @@ function Form() {
 
     return (
         <form onSubmit={onSubmitEvent} className="flex flex-col gap-3.5 mt-5">
-            <p className="file-field">
+            <div className="file-field">
                 <label htmlFor="upload">Upload Avatar</label>
                 <input className="block w-full mt-2 border-dashed border-neutral-500 rounded-lg p-2.5" type="file" name="upload" id="upload" accept=".png, .jpg, .jpeg" />
                 <div className="flex items-center gap-2 text-neutral-500 text-sm mt-2.5">
                     <img src="/src/assets/images/icon-info.svg" alt="Info icon" />
                     <span>Upload your photo (JPG or PNG, max size: 500KB).</span>
                 </div>
-            </p>
+            </div>
             <p className="name-field">
                 <label htmlFor="name">Full Name</label>
                 <input className="block w-full mt-2 border border-neutral-500 rounded-lg p-2.5" type="text" name="name" id="name" required />
