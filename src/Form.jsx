@@ -4,6 +4,20 @@ function Form() {
     const [formData, setFormData] = useState(null);
     const [showForm, setShowForm] = useState(true);
 
+    const fileTypes = [
+        'image/png',
+        'image/jpeg',
+        'imag/svg+xml'
+    ]
+
+    function validFileType(file) {
+        return fileTypes.includes(file.type);
+    }
+
+    function updateImageDisplay() {
+        const curFile = input.files;
+    }
+
     
     function onSubmitEvent(event) {
         event.preventDefault();
