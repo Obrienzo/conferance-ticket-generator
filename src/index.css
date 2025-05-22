@@ -1,1 +1,8 @@
 @import  "tailwindcss";
+
+body {
+    background-image:  url('/src/assets/images/pattern-lines.svg'), url('/src/assets/images/background-mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
