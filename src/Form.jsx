@@ -1,20 +1,14 @@
 
-
 function Form({ setShowIntro, setUserData }) {
 
     const fileTypes = [
         'image/png',
-        'image/jpeg',
-        'imag/svg+xml'
+        'image/jpeg'
     ]
 
     function validFileType(file) {
         return fileTypes.includes(file.type);
     }
-
-    // function updateImageDisplay() {
-    //     const curFile = input.files;
-    // }
 
     
     function onSubmitEvent(event) {
@@ -27,7 +21,7 @@ function Form({ setShowIntro, setUserData }) {
 
         let avatarUrl;
 
-        if (avatar) {
+        if (validFileType(avatar)) {
             avatarUrl = URL.createObjectURL(avatar);
         }
 
